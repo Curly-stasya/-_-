@@ -149,3 +149,28 @@ using namespace std;
 	}
 	cout<<"Чаще всего встречается: "<< el;
 }*/
+
+//Транспонирование матрицы
+/*int main() {
+	const int s1=5;
+	const int s2=8;
+	int a[s1][s2];
+	int a_tr[s2][s1];
+	cout<<"Матрица: "<< endl;	
+	for (int i = 0; i < s1; i++) {
+        for (int j = 0; j < s2; j++) {
+            a[i][j] = rand()%100;
+			a_tr[j][i]=a[i][j];
+			cout<<a[i][j]<<' ';
+        }
+		cout <<endl;
+    }
+	cout<<"Транспонированная матрица: "<< endl;
+	for (int k = 0; k < s2; k++) {
+        for (int l = 0; l < s1; l++) {
+            cout << a_tr[k][l]<<' ';
+		}
+		cout<< endl;
+	}
+
+}*/
