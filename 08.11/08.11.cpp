@@ -54,7 +54,8 @@ using namespace std;
 
 
 //улиточка
-/*int main() {
+/*//улиточка
+int main() {
 	setlocale(LC_ALL, "Rus");
 	int N, r, c;
 	cin >> N >> r >> c;
@@ -62,7 +63,6 @@ using namespace std;
 	int s3 = r;
 	int s2 = 0;
 	int s4 = 0;
-	int sum = 0;
 	cout << "Массив:" << endl;
 	//создание массива
 	int** A = new int* [r];
@@ -70,7 +70,7 @@ using namespace std;
 		A[k] = new int[c];
 	}
 	// Заполение массива
-	while ((s2!=s3-1)&&(s4!=s1-1)) {
+	while ((s2<s3-1)&&(s4<s1-1)) {
 			for (int l = s4; l < s1 ; ++l) {//верхняя строка
 				A[s2][l] = N;
 				++N;
@@ -90,20 +90,20 @@ using namespace std;
 			++s2;
 			++s4;
 			--s1;
-			--s3;
+			--s3;	
 	}
-	if (s2 == s3 - 1) {//1 строка
+	if (s2 >= s3 - 1) {//1 строка
 		for (int t = s4; t < s1; ++t) {
 			A[s2][t] = N;
 			++N;
-			++sum;
+			cout<<"["<<s2<<"][" << t<<"]"<<endl;
 		}
 	}
-	if (s4 == s1 - 1) {
-		for (int m = s2; m < s3 - 1; ++m) {//1 столбик
-			A[m][s1 - 1] = N;
+	if (s4 >= s1 - 1) {
+		for (int m = s2; m < s3 ; ++m) {//1 столбик
+			A[m][s4] = N;
 			++N;
-			++sum;
+			cout<<"["<<m<<"][" << s4 <<"]"<<endl;
 		}
 	}
 	for (int i = 0; i < r; ++i) {//вывод массива
@@ -117,4 +117,5 @@ using namespace std;
 		delete[] A[i];
 	}
 	delete[] A;
+}
 }*/
