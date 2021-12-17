@@ -52,10 +52,58 @@ using namespace std;
 	delete [] A;
 }*/
 
+//диагональка
+/*void diag(int** A, int row, int colm, int start1) {
+	int count_diag = row + colm - 1;
+	for (int p = 1; p <= count_diag; ++p) {
+		for (int i = 0, j = p - 1; i < p; ++i, --j) {
+			if (p % 2 == 0) {
+				if (i < row && j < colm) {
+					A[i][j] = start1++;
+				}
+				else {
+					continue;
+				}
+			}
+			else {
+				if (j < row && i < colm) {
+					A[j][i] = start1++;
+				}
+				else {
+					continue;
+				}
+			}
+		}
+	}
+}
+int main() {
+	setlocale(LC_ALL, "Rus");
+	int r, c, N;
+	cin >> r >> c >> N;
+	cout << "Массив:" << endl;
+	//создание массива
+	int** A = new int* [r];
+	for (size_t k = 0; k < r; ++k) {
+		A[k] = new int[c];
+	}
+	diag(A, r, c, N);
+
+	for (int i = 0; i < r; ++i) {//вывод массива
+		for (int j = 0; j < c; ++j) {
+			cout << A[i][j] << "\t";
+		}
+		cout << endl;
+	}
+
+	for (int i = 0; i < r; i++) {//очищение памяти
+		delete[] A[i];
+	}
+	delete[] A;
+}*/
+
 
 //улиточка
-/*//улиточка
-int main() {
+/*int main() {
 	setlocale(LC_ALL, "Rus");
 	int N, r, c;
 	cin >> N >> r >> c;
