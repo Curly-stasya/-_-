@@ -150,8 +150,8 @@ using namespace std;
 	cout<<"Чаще всего встречается: "<< el;
 }*/
 
-//Транспонирование матрицы
-/*int main() {
+Транспонирование матрицы
+int main() {
 	const int s1=5;
 	const int s2=8;
 	int a[s1][s2];
@@ -173,4 +173,4 @@ using namespace std;
 		cout<< endl;
 	}
 
-}*/
+}

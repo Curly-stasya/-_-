@@ -88,18 +88,18 @@ int main(int argc, char* argv[]) {
 
 
 			//ВЫВОД КАРТИНКИ С РАЗМЕРАМИ КРАТНЫМИ 32
-			/*for (size_t rows = 0; rows < iHeight; ++rows) {
+			for (size_t rows = 0; rows < iHeight; ++rows) {
 				for (size_t cols = 0; cols < iWidth; cols += 8) {
 					unsigned char bTmp = 0;
 					ifs.read((char*)&bTmp, 1);
 					if (ifs.eof()) { break; }
 
 					for (unsigned char mask = 0x80; mask != 0; mask >>= 1) {
-						std::cout << (((bTmp & mask) == 0) ? '1' : '0');
+						std::cout << (((bTmp & mask) == 0) ? ' ' : '0')<<' ';
 					}
 				}
 				std::cout << std::endl;
-			}*/
+			}
 
 
 

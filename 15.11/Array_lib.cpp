@@ -5,7 +5,7 @@ int** Array2d(int rows, int colms, int C) {
 	int** A = new int* [rows];
 	for (int k = 0; k < rows; ++k) {
 		A[k] = new int[colms];
-		for (int l = 0; l < colms; ++l) {//заполнение
+		for (int l = 0; l < colms; ++l) {
 			A[k][l] = rand() % C;
 		}
 	}
@@ -29,9 +29,13 @@ void output(int** array, int rows, int colms) {
 	}
 }
 
-void cleanArray2d(int ** array, int rows) {
-	for (int  k = 0; k < rows; ++k) {
+void cleanArray2d(int** array, int rows) {
+	for (int k = 0; k < rows; ++k) {
 		delete[] array[k];
 	}
 	delete[] array;
+}
+
+int& getElement(int** A, int row, int colm) {
+	return A[row - 1][colm - 1];
 }

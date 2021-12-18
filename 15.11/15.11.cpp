@@ -18,6 +18,20 @@ using namespace std;
 	cleanArray2d(A, r);
 }*/
 
+//№2 Для независимого 2 - массива реализовать освобождение ресурсов, занимаемых данным массивом
+/*int main() {
+	setlocale(LC_ALL, "Rus");
+	int r, c;
+	cout << "Введите размеры" << endl;
+	cout << "Количество строк: " << endl;
+	cin >> r;
+	cout << "Количество столбцов: " << endl;
+	cin >> c;
+	cout << "Массив:" << endl;
+	int** A = Array2d(r, c, 100);
+	cleanArray2d(A, r);
+}*/
+
 //№3 Инициализация 2-массива - все элементы одинаковы и равны заданному значению.
 /*int main() {
 	setlocale(LC_ALL, "Rus");
@@ -187,7 +201,7 @@ using namespace std;
 	cleanArray2d(B, r);
 	cleanArray2d(C, r);
 }*/
-	
+
 //№10 Создание матрицы как результата умножения двух числовых матриц.
 /*int main() {
 	setlocale(LC_ALL, "Rus");
@@ -216,7 +230,7 @@ using namespace std;
 	int** C = EmptyArray2d(r, c2);
 	for (int k = 0; k < r; ++k) {// перебираю строки А
 		for (int l = 0; l < c2; ++l) {// перебираю строки Вт
-			for (int i = 0; i < c1; ++i) // перебираю элементы строки 
+			for (int i = 0; i < c1; ++i) // перебираю элементы строки
 					sum += A[k][i] * Bt[l][i];
 			C[k][l] = sum;
 			sum = 0;
@@ -230,7 +244,7 @@ using namespace std;
 }*/
 
 //№11 Обмен местами двух строк/столбцов 2-массива.
-int main() {
+/*int main() {
 	setlocale(LC_ALL, "Rus");
 	int k;
 	cout << "1 - Обмен строк;" << endl << "2 - Обмен столбцов" << endl;
@@ -248,8 +262,8 @@ int main() {
 	cout << "Матрица:" << endl;
 	int** A = Array2d(r, c, 100);
 	output(A, r, c);
-	if ((k == 1)& (N1<r)& (N2 < r)) {// обмен строк
-		for (int i = 0; i < c; ++i) 
+	if ((k == 1) & (N1 < r) & (N2 < r)) {// обмен строк
+		for (int i = 0; i < c; ++i)
 			swap(A[N1 - 1][i], A[N2 - 1][i]);
 		cout << "Измененная матрица:" << endl;
 		output(A, r, c);
@@ -263,9 +277,31 @@ int main() {
 	else
 		cout << "Ошибка" << endl;
 	cleanArray2d(A, r);
+}*/
+
+//№12. Получение доступа по ссылке к элементу 2 - массива с заданными значениями строки и столбца.
+
+int main() {
+	setlocale(LC_ALL, "Rus");
+	int r, c;
+	cout << "Введите размеры" << endl;
+	cout << "Количество строк: ";
+	cin >> r;
+	cout << "Количество столбцов: ";
+	cin >> c;
+	cout << "Массив A:" << endl;
+	int** A = Array2d(r, c, 100);
+	output(A, r, c);
+	int row, colm;
+	cout << "Адрес необходимого элемента" << endl;
+	cout << "Строка: ";
+	cin >> row;
+	cout << "Столбец: ";
+	cin >> colm;
+	cout << getElement(A, row, colm);
 }
 
-
+	
 
 
 
