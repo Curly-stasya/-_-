@@ -1,6 +1,7 @@
 #pragma once
 
-int** Array2d(int rows, int colms, int C);// создание 2d массива и заполнение его  по умолчанию
-void output(int** array, int rows, int colms);//вывод  2d массива
+int** Array2d(int rows, int colms, int C);
+void output(int** array, int rows, int colms);
 void cleanArray2d(int** array, int rows);
 int** EmptyArray2d(int rows, int colms);
+int& getElement(int** A, int row, int colm);
