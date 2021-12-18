@@ -18,6 +18,20 @@ using namespace std;
 	cleanArray2d(A, r);
 }*/
 
+//№2 Для независимого 2 - массива реализовать освобождение ресурсов, занимаемых данным массивом
+/*int main() {
+	setlocale(LC_ALL, "Rus");
+	int r, c;
+	cout << "Введите размеры" << endl;
+	cout << "Количество строк: " << endl;
+	cin >> r;
+	cout << "Количество столбцов: " << endl;
+	cin >> c;
+	cout << "Массив:" << endl;
+	int** A = Array2d(r, c, 100);
+	cleanArray2d(A, r);
+}*/
+
 //№3 Инициализация 2-массива - все элементы одинаковы и равны заданному значению.
 /*int main() {
 	setlocale(LC_ALL, "Rus");
@@ -230,7 +244,7 @@ using namespace std;
 }*/
 
 //№11 Обмен местами двух строк/столбцов 2-массива.
-int main() {
+/*int main() {
 	setlocale(LC_ALL, "Rus");
 	int k;
 	cout << "1 - Обмен строк;" << endl << "2 - Обмен столбцов" << endl;
@@ -263,6 +277,28 @@ int main() {
 	else
 		cout << "Ошибка" << endl;
 	cleanArray2d(A, r);
+}*/
+
+//№12. Получение доступа по ссылке к элементу 2 - массива с заданными значениями строки и столбца.
+
+int main() {
+	setlocale(LC_ALL, "Rus");
+	int r, c;
+	cout << "Введите размеры" << endl;
+	cout << "Количество строк: ";
+	cin >> r;
+	cout << "Количество столбцов: ";
+	cin >> c;
+	cout << "Массив A:" << endl;
+	int** A = Array2d(r, c, 100);
+	output(A, r, c);
+	int row, colm;
+	cout << "Адрес необходимого элемента" << endl;
+	cout << "Строка: ";
+	cin >> row;
+	cout << "Столбец: ";
+	cin >> colm;
+	cout << getElement(A, row, colm);
 }
 
 
